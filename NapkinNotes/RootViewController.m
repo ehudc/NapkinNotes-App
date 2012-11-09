@@ -102,7 +102,8 @@
     NSLog(@"now: %@", now); //full date
     NSString *strDate = [[NSString alloc] initWithFormat:@"%@",now];
     
-    // FOLLOWING CODE CAUSES EXCEPTION, FIX
+    // FOLLOWING CODE CAUSES EXCEPTION
+    // FIX IF WANT HOUR/MINUTE TIMESTAMP
     /*
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"YY/MM/dd HH:mm:ss"];
@@ -117,9 +118,9 @@
     str2 = [arr objectAtIndex:1];
     NSLog(@"strdate: %@",str1);    
     
-    //dateText:str1
+    //dateText:str1 //dateText: @"Test Date 2011-12-14"
     
-    NapkinNotesDoc *newDoc = [[[NapkinNotesDoc alloc] initWithTitle:@"Title" engText:@"Text:" thumbImage:nil fullImage:nil drawing:nil dateText:@"2011-12-14"] autorelease];
+    NapkinNotesDoc *newDoc = [[[NapkinNotesDoc alloc] initWithTitle:@"Title" engText:@"Text:" thumbImage:nil fullImage:nil drawing:nil dateText:str1] autorelease];
     
     [_notes addObject:newDoc];
 
